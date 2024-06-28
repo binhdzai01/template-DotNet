@@ -1,0 +1,1 @@
+# Pre : Install Redis to localhost
