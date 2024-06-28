@@ -17,7 +17,7 @@ namespace Template.PubSub.Controllers
             _pubSubService = pubSubService;
         }
 
-        [HttpGet(Name = "TestPubsub")]
+        [HttpGet(Name = "test-pub-sub")]
         public IActionResult TestPubsub()
         {
             _pubSubService.PublishSystem("test-pubsub");
