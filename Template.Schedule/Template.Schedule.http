@@ -1,0 +1,6 @@
+@Template.Schedule_HostAddress = http://localhost:5234
+
+GET {{Template.Schedule_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
