@@ -19,6 +19,13 @@ namespace Template.PubSub
 
             services.AddScoped<RedisConnectionManager>();
             services.AddScoped<IPubSubService, PubSubService>();
+            services.AddScoped<ICacheService, DistributedCacheService>();
+
+            services.AddDistributedRedisCache(options =>
+            {
+                var connectionString = Configuration["RedisConfiguration:ConnectionString"];
+                options.Configuration = connectionString;
+            });
 
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
